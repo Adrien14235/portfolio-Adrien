@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2c2f48;
+    color: #fff;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background-color: #1e2036;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    color: #9a9cb2;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+}
+
+.sidebar nav ul li a i {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+    color: #ff4655;
+    background-color: #2c2f48;
+}
+
+.sidebar .footer {
+    margin-top: auto;
+    color: #9a9cb2;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.main-content {
+    margin-left: 60px;
+    padding: 20px;
+    text-align: center;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.container-slider-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-list {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.image-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slide-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 10px;
+}
+
+.project-info {
+    margin-top: 20px;
+}
+
+.project-box {
+    background-color: #1e2036;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.content {
+    margin-left: 220px; /* Ajustez la marge selon la largeur de la sidebar */
+    padding: 20px; /* Ajoutez un padding pour espacer le contenu des bords */
+  }
+  
+  .project-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-carousel h2 {
+    text-align: center;
+  }
+  
+  .container-slider-wrapper {
+    width: 80%; /* Ajustez selon vos besoins */
+    margin: auto;
+  }
+  

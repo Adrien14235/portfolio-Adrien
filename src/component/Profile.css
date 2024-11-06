@@ -1,0 +1,112 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 20px;
+}
+
+.profile-box, .about-box {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    background-color: #1e2036;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.profile h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.profile p {
+    font-size: 18px;
+    color: #9a9cb2;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #ff4655;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-right: 10%;
+}
+.btn1 {
+    background-color: #ff4655;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e53e4d;
+}
+
+.info-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #2c2f48;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.info-box h3, .info-box h4 {
+    color: #ff4655;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    margin-bottom: 20px;
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-box ul li {
+    margin-bottom: 10px;
+}
+
+.about-box {
+    text-align: left;
+    color: #fff;
+}
+
+.about-box p {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .profile-container {
+        flex-direction: row;
+    }
+
+    .profile-box, .about-box {
+        flex: 1;
+        max-width: 45%;
+        margin: 10px;
+    }
+}

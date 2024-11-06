@@ -1,0 +1,78 @@
+.veille-technologique {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.carousel-and-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 7%;
+  margin-left: 1%; /* Ajustez cette valeur pour décaler le carrousel à droite */
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.carousel-button {
+  background-color: #1e2036;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.carousel-content {
+  width: 500px; /* Augmenter la largeur pour agrandir l'image */
+  height: 400px; /* Augmenter la hauteur pour agrandir l'image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.text-box {
+  width: 450px;
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #1e2036;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 12%; /* Décaler la boîte de texte à droite */
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-and-text {
+    flex-direction: column;
+    margin-left: 0; /* Réinitialisez la marge pour les écrans plus petits */
+  }
+
+  .carousel-container {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .text-box {
+    text-align: center;
+    width: 100%;
+    margin-left: 0; /* Réinitialisez la marge pour les écrans plus petits */
+  }
+}

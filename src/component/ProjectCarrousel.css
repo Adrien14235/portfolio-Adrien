@@ -1,0 +1,82 @@
+.project-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.container-slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.container-slider-wrapper img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+}
+
+.slider-wrapper {
+  width: 60%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-list {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 10px;
+}
+
+.slide-button.left {
+  left: 10px;
+}
+
+.slide-button.right {
+  right: 10px;
+}
+
+.slide-button:focus {
+  outline: none;
+}
+
+.slide-button.material-symbols-rounded {
+  font-family: 'Material Icons';
+}
+
+.slide-button:nth-child(1) {
+  left: 0;
+}
+
+.slide-button:nth-child(3) {
+  right: 0;
+}
+
+.project-description {
+  margin-top: 1rem;
+}

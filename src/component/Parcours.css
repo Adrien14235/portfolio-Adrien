@@ -1,0 +1,40 @@
+/* src/component/Parcours.css */
+
+.parcours-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .parcours-box {
+    background-color: #1e2036;
+    padding: 20px;
+    width: 45%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .parcours-box h2 {
+    color: #ff4655;
+    text-align: center;
+  }
+  
+  .sub-box {
+    background-color: #2c2f48;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .sub-box h3 {
+    color: #fff;
+  }
+  
+  .sub-box p {
+    color: #9a9cb2;
+  }
+  @media (max-width: 768px) {
+    .parcours-box {
+        flex: 1 1 100%;
+    }
+}
