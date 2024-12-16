@@ -18,6 +18,7 @@
     margin-bottom: 20px;
 }
 
+
 .sidebar nav ul {
     list-style: none;
     padding: 0;
@@ -41,9 +42,19 @@
 
 .sidebar nav ul li a i {
     display: block;
-    font-size: 24px;
-    margin-bottom: 5px;
+    font-size: 24px; /* Taille de l'icône */
+    margin: 0 auto; /* Centre les icônes horizontalement */
+    overflow: hidden; /* Empêche le débordement */
+    text-overflow: ellipsis; /* Si nécessaire, ajoute des points de suspension */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    width: 40px; /* Fixe une largeur pour contenir les icônes */
+    height: 40px; /* Fixe une hauteur pour contenir les icônes */
+    line-height: 40px; /* Aligne l'icône verticalement au centre */
+    text-align: center; /* Centre le contenu */
+    background-color: #2c2f48; /* Facultatif : ajout d'un fond pour tester */
+    border-radius: 50%; /* Donne une forme circulaire, si besoin */
 }
+
 
 .sidebar nav ul li a:hover,
 .sidebar nav ul li a.active {

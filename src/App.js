@@ -26,7 +26,7 @@ const App = () => {
     <Router>
       <div className="App">
         <video autoPlay loop muted className="background-video">
-        <source src="/bg.mp4" type="video/mp4" />
+          <source src="/bg.mp4" type="video/mp4" />
         </video>
         <div className="overlay"></div>
         <Sidebar />

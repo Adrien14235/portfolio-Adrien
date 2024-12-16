@@ -10,34 +10,34 @@ const Sidebar = () => {
       </NavLink>
       <nav>
         <ul>
+        <li>
+            <NavLink to="/parcours" activeClassName="active">
+              <i className="material-icons">Parcours</i> 
+              School
+            </NavLink>
+          </li>
           <li>
             <NavLink to="/competences" activeClassName="active">
-              <i className="material-icons">Skills</i> 
-              Compétences
+              <i className="material-icons">Compétences</i> 
+              Skills
             </NavLink>
           </li>
           <li>
             <NavLink to="/projets" activeClassName="active">
-              <i className="material-icons">Work</i> 
-              Projet Pro
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/parcours" activeClassName="active">
-              <i className="material-icons">School</i> 
-              Parcours
+              <i className="material-icons">Projet Pro</i> 
+               Work
             </NavLink>
           </li>
           <li>
             <NavLink to="/veille-technologique" activeClassName="active">
-              <i className="material-icons">Search</i> 
-              Veille Technologique
+              <i className="material-icons">Veille Technologique</i> 
+              Search
             </NavLink>
           </li>
           <li>
             <NavLink to="/contact" activeClassName="active">
-              <i className="material-icons">Mail</i> 
-              Page Contact
+              <i className="material-icons">Page Contact</i> 
+              Mail
             </NavLink>
           </li>
         </ul>
