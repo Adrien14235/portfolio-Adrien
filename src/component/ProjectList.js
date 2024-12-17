@@ -9,17 +9,18 @@ import img5 from '../projets/plante.png';
 //import img6 from '../projets/bv3.png';
 import img7 from '../projets/movie1.png'
 import img8 from '../projets/Bibli1.png'
+import img9 from '../projets/gamehub1.png'
 
 const schoolProjects = [
   { id: 1, title: 'RespireStatEtu', image: img1 },
-  { id: 2, title: 'Bibliothèque Virtuel', image: img4 },
   { id: 5, title: 'Bibliothèque Virtuel V2', image: img8 },
+  { id: 6, title: 'Gamehub', image: img9 },
   // Ajoutez d'autres projets scolaires ici
 ];
 
 const internshipProjects = [
   { id: 3, title: 'La Maison Jungle', image: img5 },
-  { id: 4, title: 'Projet 4',  image: img7 },
+  { id: 4, title: 'Découverte API',  image: img7 },
   //{ id: 5, title: 'Projet 5',  image: img2 },
   //{ id: 6, title: 'Projet 6', image: img3 },
   // Ajoutez d'autres projets de stage/alternance ici

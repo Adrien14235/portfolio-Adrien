@@ -23,7 +23,7 @@ const Profile = () => {
 
                     {/* Bouton pour l'E4 */}
                     <a 
-                        href="/E4.pdf" 
+                        href="/E4 ,ew.pdf" 
                         className="btn1" 
                         target="_blank" 
                         rel="noopener noreferrer"
