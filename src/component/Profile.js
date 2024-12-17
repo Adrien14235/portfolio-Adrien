@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaGithub, FaGitlab, FaLinkedin } from 'react-icons/fa'; // Importation des icônes
 import './Profile.css';
 
 const Profile = () => {
@@ -34,9 +35,22 @@ const Profile = () => {
                         <h4>MES INFORMATIONS :</h4>
                         <ul>
                             <li>Adrien Antunes - Saint-Germain-sur-Morin, France</li>
-                            <li>Âge : 18 ans</li>
+                            <li>Âge : 19 ans</li>
                             <li>Email : adrienantunes05@gmail.com</li>
                         </ul>
+                    </div>
+
+                    {/* Liens vers les réseaux sociaux */}
+                    <div className="social-links">
+                        <a href="https://github.com/Adrien14235" target="_blank" rel="noopener noreferrer">
+                            <FaGithub size={30} color="#fff" className="social-icon" />
+                        </a>
+                        <a href="https://gitlab.com/AdrienIpssi" target="_blank" rel="noopener noreferrer">
+                            <FaGitlab size={30} color="#fff" className="social-icon" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/adrien-antunes-8308312a5/" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin size={30} color="#fff" className="social-icon" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -51,7 +65,7 @@ const Profile = () => {
                 <p>
                     J'ai développé une passion pour l'informatique depuis que j'ai commencé mes études en BTS SIO. 
                     C'est ainsi que j'ai découvert le développement web et le monde de l'informatique. 
-                    Je souhaite poursuivre mes études vers un bachelor en SLAM et, dans un futur proche, 
+                    Je souhaite poursuivre mes études vers un bachelor en SLAM et dans un futur proche, 
                     continuer sur un master en Big Data et Intelligence Artificielle.
                 </p>
             </div>

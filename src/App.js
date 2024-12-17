@@ -5,10 +5,10 @@ import Competences from './component/Competence';
 import Projets from './component/ProjectCarrousel';
 import Parcours from './component/Parcours';
 import VeilleTechnologique from './component/VeilleTechnologique';
-import Contact from './component/Contact';
 import Profile from './component/Profile';
 import ProjectList from './component/ProjectList';
 import ProjectDetails from './component/ProjectDetail';
+import Bts from './component/Bts'
 import './App.css';
 
 const App = () => {
@@ -39,7 +39,8 @@ const App = () => {
             <Route path="/projets" element={<Projets project={project} />} />
             <Route path="/parcours" element={<Parcours />} />
             <Route path="/veille-technologique" element={<VeilleTechnologique />} />
-            <Route path="/contact" element={<Contact />} />
+            
+            <Route path="/Bts" element={<Bts />} />
           </Routes>
         </div>
       </div>

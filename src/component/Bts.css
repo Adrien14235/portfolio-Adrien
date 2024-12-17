@@ -1,0 +1,56 @@
+/* Conteneur global */
+.bts-container {
+    font-family: 'Arial', sans-serif;
+    padding: 40px;
+    color: #333;
+    margin-left: 100px; /* Ajout d'un espace pour éviter de déborder sur la barre latérale */
+}
+
+/* Style global pour les sections */
+.bts-section, .slam-section, .ipssi-section {
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+/* Titres */
+.bts-title, .slam-title, .ipssi-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #FDF5E6;
+    position: relative;
+}
+
+/* Ligne décorative sous le titre */
+.bts-title::after, .slam-title::after, .ipssi-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff4655;
+    margin-top: 5px;
+}
+
+/* Paragraphe */
+.bts-section p, .slam-section p, .ipssi-section p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Contenu IPSSI */
+.ipssi-content {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo IPSSI */
+.ipssi-logo {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

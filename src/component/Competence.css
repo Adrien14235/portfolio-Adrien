@@ -5,6 +5,7 @@
 }
 
 .competences-container h2 {
+    font-family: 'Playfair Display', serif;
     text-align: center;
     color: #ff4655;
 }
@@ -55,6 +56,7 @@
 }
 
 .skill-description {
+    font-family: 'Roboto', sans-serif;
     margin-top: 10px;
     font-size: 14px;
     color: #9a9cb2;

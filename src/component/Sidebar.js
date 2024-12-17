@@ -11,6 +11,12 @@ const Sidebar = () => {
       <nav>
         <ul>
         <li>
+            <NavLink to="/Bts" activeClassName="active">
+              <i className="material-icons">BTS SIO</i> 
+              BTS
+            </NavLink>
+          </li>
+        <li>
             <NavLink to="/parcours" activeClassName="active">
               <i className="material-icons">Parcours</i> 
               School
@@ -32,12 +38,6 @@ const Sidebar = () => {
             <NavLink to="/veille-technologique" activeClassName="active">
               <i className="material-icons">Veille Technologique</i> 
               Search
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact" activeClassName="active">
-              <i className="material-icons">Page Contact</i> 
-              Mail
             </NavLink>
           </li>
         </ul>
