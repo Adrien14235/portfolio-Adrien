@@ -9,7 +9,7 @@ const Profile = () => {
                 <div className="profile">
                     <img src="/IMG_1882.jpg" alt="Adrien Antunes" className="profile-image" />
                     <h1>Adrien Antunes</h1>
-                    <p>Je suis en première année de BTS à IPSSI Marne-la-Vallée</p>
+                    <p>Je suis en deuxième année de BTS à IPSSI Marne-la-Vallée</p>
 
                     {/* Bouton pour le CV */}
                     <a 
