@@ -16,6 +16,8 @@ const schoolProjects = [
   { id: 1, title: 'RespireStatEtu', image: img1 },
   { id: 5, title: 'Bibliothèque Virtuel V2', image: img8 },
   { id: 6, title: 'Gamehub', image: img9 },
+  { id: 8, title: 'ZSQD', image: img9 },
+
   // Ajoutez d'autres projets scolaires ici
 ];
 

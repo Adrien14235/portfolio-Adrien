@@ -1,4 +1,6 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ProjectCarousel from './ProjectCarrousel';
 import ProjectDetailcss from '../component/ProjectDetail.css'
@@ -24,30 +26,29 @@ import img21 from '../projets/Yatouze/BV.png'
 import img22 from '../projets/Yatouze/asana.png'
 
 import doc1 from '../projets/cdc_biblio.pdf'
-import zip1 from '../projets/respirestatetug03.zip';
-import zip2 from '../projets/gamehub.zip';
-import zip from '../projets/yatouzedoc.zip'
+import doc2 from '../projets/respirestatetu/Respirstat.pdf'
+import doc3 from '../projets/gamehubDoc/Doc.pdf'
 
 const projects = [
-  { id: 1, title: 'RespireStatEtu', images: [img1, img2, img3], description: 'En tant que développeur nous devions recensés les polluants au abords des crèches et des écoles en Île de France ', file: zip1  },
+  { id: 1, title: 'RespireStatEtu', images: [img1, img2, img3], description: 'En tant que développeur nous devions recensés les polluants au abords des crèches et des écoles en Île de France ', file: doc2  },
   { id: 3, title: 'La Maison Jungle', images: [img7], description: "En arrivant dans mon stage j'ai du apprendre de nouveau language telle que React.", },
   { id: 4, title: 'Liste de Film', images: [img8, img9, img10], description: "Le projet dans lequel je suis arrivé pour mon stage fonctionnait autour d'API.",  },
   { id: 5, title: 'Bibliothèque Virtuel V2', images: [img11, img12, img13], description: "Le projet Bibliothèque Virtuel V2 est un projet consistant à améliorer la précédente bibliothèque.",file: doc1 },
-  { id: 6, title: 'Gamehub', images: [img16, img14, img15], description: "", file: zip2 },
-  { id: 7, title: 'Yatouze', images: [img17, img18,img19, img20, img21, img22], description: "", file:zip}
+  { id: 6, title: 'Gamehub', images: [img16, img14, img15], description: "", file: doc3 },
+  { id: 7, title: 'Yatouze', images: [img17, img18,img19, img20, img21, img22], description: "",}
 ];
 
 const ProjectDetails = () => {
   const { id } = useParams();
-  const project = projects.find(p => p.id === parseInt(id, 10));
+  const [showPreview, setShowPreview] = useState(false);
+
+  const project = projects.find((p) => p.id === parseInt(id, 10));
 
   const handleDownload = () => {
-    if (project && project.file) {
-      const link = document.createElement('a');
-      link.href = project.file; // Chemin vers le fichier (zip ou pdf)
-      const fileExtension = project.file.split('.').pop(); // Récupère l'extension du fichier
-      const filename = `${project.title.replace(/\s+/g, '_')}.${fileExtension}`;
-      link.download = filename; // Nom de fichier dynamique
+    if (project?.file) {
+      const link = document.createElement("a");
+      link.href = project.file;
+      link.download = project.file.split("/").pop(); // Nom du fichier
       link.click();
     }
   };
@@ -60,14 +61,19 @@ const ProjectDetails = () => {
           <ProjectCarousel images={project.images} />
           <p>{project.description}</p>
 
-          {/* Bouton unique */}
-          {project.file && (
-            <button 
-              onClick={handleDownload} 
-              className="download-button"
-            >
-              Télécharger les Ressources
-            </button>
+          {project.file && project.file.endsWith(".pdf") && (
+            <div className="button-group">
+              <button onClick={() => setShowPreview(!showPreview)} className="preview-button">
+                {showPreview ? "Masquer l'Aperçu" : "Prévisualiser le Document"}
+              </button>
+              <button onClick={handleDownload} className="download-button">
+                Télécharger le Document
+              </button>
+            </div>
+          )}
+          
+          {showPreview && project.file && (
+            <iframe src={project.file} width="100%" height="600px" className="border rounded-md shadow-md mt-4" />
           )}
         </>
       ) : (
@@ -78,4 +84,3 @@ const ProjectDetails = () => {
 };
 
 export default ProjectDetails;
-
