@@ -11,12 +11,13 @@ import img7 from '../projets/movie1.png'
 import img8 from '../projets/Bibli1.png'
 import img9 from '../projets/gamehub1.png'
 import img10 from '../projets/Yatouze1.png'
+import img11 from '../projets/zsqd-logo.png'
 
 const schoolProjects = [
   { id: 1, title: 'RespireStatEtu', image: img1 },
   { id: 5, title: 'Bibliothèque Virtuel V2', image: img8 },
   { id: 6, title: 'Gamehub', image: img9 },
-  { id: 8, title: 'ZSQD', image: img9 },
+  { id: 8, title: 'ZSQD', image: img11 },
 
   // Ajoutez d'autres projets scolaires ici
 ];
