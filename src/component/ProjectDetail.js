@@ -34,6 +34,8 @@ import doc1 from '../projets/cdc_biblio.pdf'
 import doc2 from '../projets/respirestatetu/Respirstat.pdf'
 import doc3 from '../projets/gamehubDoc/Doc.pdf'
 import doc4 from '../projets/zsqd-doc/zsqd-doc.pdf'
+import doc5 from '../projets/yatouzedoc/bugyt2_merged.pdf'
+
 
 const projects = [
   { id: 1, title: 'RespireStatEtu', images: [img1, img2, img3], description: 'En tant que développeur nous devions recensés les polluants au abords des crèches et des écoles en Île de France ', file: doc2  },
@@ -41,7 +43,7 @@ const projects = [
   { id: 4, title: 'Liste de Film', images: [img8, img9, img10], description: "Le projet dans lequel je suis arrivé pour mon stage fonctionnait autour d'API.",  },
   { id: 5, title: 'Bibliothèque Virtuel V2', images: [img11, img12, img13], description: "Le projet Bibliothèque Virtuel V2 est un projet consistant à améliorer la précédente bibliothèque.",file: doc1 },
   { id: 6, title: 'Gamehub', images: [img16, img14, img15], description: "M2L souhaite développer un site Web pour la création de tournois E-Sport en Lorraine .", file: doc3 },
-  { id: 7, title: 'Yatouze', images: [img17, img18,img19, img20, img21, img22], description: ""},
+  { id: 7, title: 'Yatouze', images: [img17, img18,img19, img20, img21, img22], description: "", file: doc5},
   { id: 8, title: 'ZQSD', images: [img23, img24, img25, img26, img27], description: "M2L souhaite développer une application mobile pour la création de paris lié à l’E-Sport", file: doc4 },
 ];
 
