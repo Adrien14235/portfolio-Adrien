@@ -24,7 +24,7 @@ const Profile = () => {
                         target="_blank" 
                         rel="noopener noreferrer"
                     >
-                        Consulter l'E4
+                        Consulter l'E5
                     </a>
                     
                     <div className="info-box">

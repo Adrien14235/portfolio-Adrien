@@ -254,3 +254,88 @@
 .indicator:hover {
   background-color: #bbb;
 }
+
+/* Conteneur principal de la méthodologie */
+.methodologie-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Carte individuelle pour chaque élément méthodologique */
+.methodologie-item {
+  background-color: #1e2036;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.methodologie-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre de la carte */
+.methodologie-item h3 {
+  color: #ff4655;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  border-bottom: 2px solid #ff4655;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Contenu textuel */
+.methodologie-item p {
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Style pour les écrans moyens */
+@media (min-width: 768px) {
+  .methodologie-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .methodologie-item {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 300px;
+  }
+}
+
+/* Style pour les grands écrans */
+@media (min-width: 1024px) {
+  .methodologie-item {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+}
+
+/* Animation subtile au chargement */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.methodologie-item {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.methodologie-item:nth-child(1) { animation-delay: 0.1s; }
+.methodologie-item:nth-child(2) { animation-delay: 0.2s; }
+.methodologie-item:nth-child(3) { animation-delay: 0.3s; }

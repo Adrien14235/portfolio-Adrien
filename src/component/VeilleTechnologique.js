@@ -6,6 +6,11 @@ import img1 from '../projets/veille/1.png';
 import img2 from '../projets/veille/2.png';
 import img3 from '../projets/veille/3.jpg';
 import img4 from '../projets/veille/4.png';
+import img5 from '../projets/veille/5.jpg';
+import img6 from '../projets/veille/6.png';
+import img7 from '../projets/veille/7.jpg';
+import img8 from '../projets/veille/8.jpg';
+import img9 from '../projets/veille/9.png';
 
 // Données pour la veille technologique n°1 (IA et cybersécurité)
 const veilleData1 = [
@@ -30,15 +35,15 @@ const veilleData1 = [
 // Données pour la veille technologique n°2 (exemple avec des données fictives à remplacer)
 const veilleData2 = [
   {
-    image: img1, // À remplacer par une image d'IA ou de code
+    image: img5, // À remplacer par une image d'IA ou de code
     text: "L’intelligence artificielle générative (IA générative) est une branche de l’IA capable de produire du contenu nouveau (texte, code, images…). Dans le développement web, elle permet de générer, corriger ou compléter du code via des modèles comme GPT (OpenAI) ou Codex. Elle transforme la façon de coder en proposant une assistance intelligente."
   },
   {
-    image: img2, // Par exemple : logo de GitHub Copilot ou ChatGPT
+    image: img6, // Par exemple : logo de GitHub Copilot ou ChatGPT
     text: "Outils populaires : GitHub Copilot, ChatGPT, Amazon CodeWhisperer, Tabnine. Cas d’usage : génération de composants, refactorisation de code, création de tests, documentation automatique. Avantages : gain de temps, aide aux débutants, meilleure productivité. Limites : sécurité, dépendance, code parfois incorrect ou flou juridiquement."
   },
   {
-    image: img3, // Image illustrant l’IA en entreprise ou un IDE
+    image: img7, // Image illustrant l’IA en entreprise ou un IDE
     text: "L’IA générative est adoptée en entreprise pour accélérer les livraisons, faciliter l’apprentissage, automatiser les tests, ou générer des prototypes. Elle ouvre la voie à un nouveau rôle du développeur : pilote et superviseur de la génération assistée par IA. Cette technologie est en plein essor et redéfinit les pratiques du développement."
   }
 ];
@@ -47,20 +52,16 @@ const veilleData2 = [
 // Données pour la méthode de veille
 const methodeVeilleData = [
   {
-    image: img4, // À remplacer par une image illustrant votre méthode
-    text: "Ma méthode de veille technologique consiste en plusieurs étapes clés pour rester à jour dans mon domaine. Tout d'abord, j'identifie les sources d'information pertinentes comme les blogs spécialisés, les newsletters techniques, les podcasts et les communautés en ligne."
+    image: img8,
+    text: "J'ai principalement utilisé Feedly comme outil central de veille technologique. Cette plateforme m'a permis d'agréger et d'organiser efficacement toutes mes sources d'information."
   },
   {
-    image: img1, // À remplacer
-    text: "Je m'abonne à des newsletters techniques spécialisées et je consacre du temps chaque semaine pour explorer les nouveautés. J'utilise des outils d'agrégation comme Feedly pour centraliser toutes mes sources et ne rien manquer d'important dans mon domaine."
+    image: img9,
+    text: "Grâce à Feedly, j'ai pu configurer des flux dédiés à chaque thème de veille, avec un système de tags et d'alertes pour ne manquer aucune actualité importante dans mon domaine."
   },
   {
-    image: img2, // À remplacer
-    text: "Je participe activement à des forums et communautés techniques comme Stack Overflow, GitHub et des groupes spécialisés sur LinkedIn et Discord. Cela me permet d'échanger avec d'autres professionnels et de découvrir de nouvelles tendances et solutions."
-  },
-  {
-    image: img3, // À remplacer
-    text: "Pour approfondir mes connaissances, je suis régulièrement des cours en ligne, des webinaires et j'assiste à des conférences virtuelles. Je garde un carnet de notes et des documents organisés pour faciliter la consultation ultérieure de ces informations."
+    image: img8,
+    text: "Une consultation régulière de Feedly (plusieurs fois par semaine) m'a permis de maintenir une veille active et réactive aux dernières évolutions technologiques."
   }
 ];
 
@@ -136,7 +137,7 @@ const VeilleTechnologique = () => {
       {/* Titre dynamique basé sur la sélection */}
       <h3 className="veille-subtitle">
         {selectedOption === 'veille1' ? 'IA et Cybersécurité' : 
-         selectedOption === 'veille2' ? 'Titre de Votre Veille N°2' : 
+         selectedOption === 'veille2' ? 'L’intelligence artificielle générative dans le développement web' : 
          'Comment j\'effectue ma veille technologique'}
       </h3>
       
