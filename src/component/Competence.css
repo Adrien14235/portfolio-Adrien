@@ -1,71 +1,228 @@
-/* src/component/Competences.css */
+/* src/component/Competence.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .competences-container {
-    padding: 20px;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
 }
 
-.competences-container h2 {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    color: #ff4655;
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  color: #2d3748;
+  font-weight: 700;
 }
 
-.skills-columns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #ff4655;
+  border-radius: 2px;
 }
 
-.skill {
-    flex: 1 1 calc(50% - 20px); /* Adjust to fit two columns with gap */
-    margin-bottom: 20px;
+.section-title .highlight {
+  color: #ff4655;
+}
+
+/* Tabs navigation */
+.categories-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.category-tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background-color: #f7fafc;
+  color: #4a5568;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.category-tab:hover {
+  background-color: #edf2f7;
+  transform: translateY(-2px);
+}
+
+.category-tab.active {
+  background-color: #ff4655;
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 70, 85, 0.3);
+}
+
+/* Skills display */
+.skills-category {
+  display: none;
+}
+
+.skills-category.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Skill cards */
+.skill-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #f7fafc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: #ff4655;
+  font-size: 1.5rem;
+}
+
+.skill-info {
+  flex: 1;
 }
 
 .skill-name {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 18px;
-    color: #fff;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.skill-level {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Progress bar styling */
+.progress-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
 }
 
 .progress-bar {
-    width: 100%;
-    background-color: white; /* Gray background for the whole bar */
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    height: 20px;
+  flex: 1;
+  height: 8px;
+  background-color: #edf2f7;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
 }
 
-.progress {
-    height: 100%; /* Utiliser 100% pour correspondre à la hauteur de la barre de progression */
-    background-color: #ff4655; /* Highlight color */
-    border-radius: 10px 0 0 10px; /* Round corners on the left */
-    position: absolute;
-    top: 0;
-    left: 0;
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+
+.progress-markers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.marker {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .progress-percentage {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    font-weight: bold;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4a5568;
+  min-width: 40px;
+  text-align: right;
 }
 
 .skill-description {
-    font-family: 'Roboto', sans-serif;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #9a9cb2;
-    background-color: #1e2036;
-    padding: 10px;
-    border-radius: 5px;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #718096;
+  line-height: 1.5;
 }
+
+/* For icons - you'll need to add a font icon library like Font Awesome or use SVGs */
+/* These are placeholders for demo purposes */
+.icon-html5::before { content: '📄'; }
+.icon-css3::before { content: '🎨'; }
+.icon-php::before { content: '🐘'; }
+.icon-javascript::before { content: '📜'; }
+.icon-java::before { content: '☕'; }
+.icon-react::before { content: '⚛️'; }
+.icon-nextjs::before { content: '▲'; }
+.icon-database::before { content: '🗄️'; }
+.icon-git::before { content: '📊'; }
+
+/* Responsive design */
 @media (max-width: 768px) {
-    .skill {
-        flex: 1 1 100%;
-    }
+  .competences-container {
+    padding: 3rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .categories-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .category-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
